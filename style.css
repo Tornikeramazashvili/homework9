@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+}
+
+.box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 150px auto;
+}
+
+.grid {
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(4, 300px);
+    grid-template-areas:
+    'MasonryI responsive overlap overlap'
+    'MasonryI fluid explicitlyPlaced NegativeSpace'
+    'FlexibleBreadth MasonryII explicitlyPlaced masonryIII'
+    'DomOrder MasonryII namedTracks namedTracks'
+}
+
+.item-1 {
+    grid-area: MasonryI;
+}
+
+.item-3 {
+    grid-area: overlap;
+}
+
+.item-5 {
+    grid-area: explicitlyPlaced;
+}
+
+.item-8 {
+    grid-area: MasonryII;
+}
+
+.item-11 {
+    grid-area: namedTracks;
+}
